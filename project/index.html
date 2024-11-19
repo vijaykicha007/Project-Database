@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="ASSET\DATATABLE\css\dataTables.css">
+	<link rel="stylesheet" type="text/css" href= "ASSET\DATATABLE\css\bootstrap.min.css">
+    <style type="text/css">
+        .imgone{
+            background: red;
+            width: 53px;
+            height: 53px;
+            padding: 0px;
+        }
+
+        .imgtwo{
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar{
+            background-color: black;
+            padding: 0px;
+        }
+        .backgroundview{
+                background-color: yellow;
+        }
+        .backview{
+                background-color: red;
+        }
+
+    </style>
+	<title></title>
+</head>
+<body class='backgroundview backview'>
+    
+   <nav class="navbar"><img class="imgone" src="tn.png">
+     <a href="login.html" >LogOut
+    <img class="imgtwo" src="users.png">
+    </a>
+   </nav>
+
+
+<div class="container" id='tableview'>
+    <table id="myTable" class="display" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Sonya Frost</td>
+                <td>Software Engineer</td>
+                <td>Edinburgh</td>
+                <td>23</td>
+                <td>$103,600</td>
+            </tr>
+            <tr>
+                <td>Quinn Flynn</td>
+                <td>Support Lead</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>$342,000</td>
+            </tr>
+            <tr>
+                <td>Dai Rios</td>
+                <td>Personnel Lead</td>
+                <td>Edinburgh</td>
+                <td>35</td>
+                <td>$217,500</td>
+            </tr>
+            <tr>
+                <td>Gavin Joyce</td>
+                <td>Developer</td>
+                <td>Edinburgh</td>
+                <td>42</td>
+                <td>$92,575</td>
+            </tr>
+            <tr>
+                <td>Martena Mccray</td>
+                <td>Post-Sales support</td>
+                <td>Edinburgh</td>
+                <td>46</td>
+                <td>$324,050</td>
+            </tr>
+            <tr>
+                <td>Jennifer Acosta</td>
+                <td>Junior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>43</td>
+                <td>$75,650</td>
+            </tr>
+            <tr>
+                <td>Shad Decker</td>
+                <td>Regional Director</td>
+                <td>Edinburgh</td>
+                <td>51</td>
+                <td>$183,000</td>
+            </tr>
+        </tbody>
+    </table>
+           <button id="clickable" >ADD</button>
+  </div>
+    
+           <div class="row formtbl d-none">
+            <form>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="control-label">first name:</label>
+                        <input class="form-control" type="text" placeholder="Enter firstname">
+                    </div>
+                    <div class="col">
+                        <label class="control-label">last name:</label>
+                        <input class="form-control" type="text" placeholder="Enter lastname">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="control-label">Phone:</label>
+                        <input class="form-control" type="text" placeholder="Enter Phone">
+                    </div>
+                    <div class="col">
+                        <label class="control-label">Gender:</label>
+                        <input class="form-control" type="text" placeholder="Enter Gender">
+                    </div>
+                </div>
+              <br>
+    
+                <div class="row">
+                    <div class="col">
+                <label class="control-label">Address:</label>
+                 <textarea class="form-control" type="text" placeholder="Enter Address" id="Textarea1">
+                    </textarea>
+                </div>
+                </div>
+                <br>
+
+
+                    <button class="backbtn" >Submit</button>
+                    <button class="backbtn">Back</button>
+            </form>    
+          </div>
+
+              			
+
+</body>
+<script src="ASSET\jquery-3.7.1.js"></script>
+<script src="ASSET\DATATABLE\js\dataTables.js"></script>
+<script src="ASSET\DATATABLE\js\bootstrap.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+            $('#myTable').DataTable()
+
+           
+            $('#clickable').click(function(){
+                $('.formtbl').removeClass('d-none');
+                $('#myTable_wrapper').addClass('d-none');
+                $('#tableview').addClass('d-none');
+                $('body').removeClass('backview');
+            });
+
+            
+            $('#backbtn').click(function(){
+                $('.formtbl').addClass('d-none');
+                $('#myTable_wrapper').removeClass('d-none');
+                $('#tableview').removeClass('d-none');
+                $('body').addClass('backview');
+            });
+
+          });
+	
+</script>
+</html>

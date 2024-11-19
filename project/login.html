@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href= "ASSET\DATATABLE\css\bootstrap.min.css">
+	<title></title>
+
+<body>
+	<div style="background-color: gold;" class="container min-vh-100 d-flex justify-content-center align-items-center"  >
+		 <div class=" col-md-8 col-lg-6 ">
+
+		 	<div class="card shadow-2-strong" style="border-radius: 1rem;">
+
+		 		 <div class=" p-5 text-center">
+		<form>
+  <div class="mb-3">
+  	<label class="form-label"><img width="40" height="40" src="https://img.icons8.com/ios-glyphs/60/circled-envelope.png" alt="circled-envelope"/>Email </label>
+  	<input type="email" class="form-control" id="Email">
+  </div>
+  <div class="mb-3">
+  	<label  class="form-label"><img width="50" height="50" src="https://img.icons8.com/sf-ultralight-filled/50/private2.png" alt="private2"/>Password</label>
+  	<input type="password" class="form-control" id="Password">
+  </div>
+<button type="button" class="btn btn-primary" onclick="func()">Submit</button>
+        </form>
+      </div>
+     </div>
+   </div>
+ </div>
+</body>
+<script type="text/javascript">
+	function func() {
+		let Email = document.getElementById('Email').value;
+        let Password = document.getElementById('Password').value;
+        if (Email == "vijay@gamil.com" && Password == "123456") {
+        	console.log(window.location.href ="index.html");
+        	return;
+        	//alert("success full");
+        }
+        else{
+        	//alert("wrong entry invalid");
+        }
+	}
+</script>
+</head>
